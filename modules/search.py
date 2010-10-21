@@ -51,6 +51,9 @@ def formatnumber(n):
 def g(phenny, input): 
    """Queries Google for the specified input."""
    query = input.group(2)
+   reply_to =  query.split('@')
+   reply_to =  [nick.strip() for nick in reply_to ]
+  
    if not query: 
       return phenny.reply('.g what?')
    uri = result(query)
