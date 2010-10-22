@@ -29,6 +29,7 @@ def find_log(phenny, input):
     found_count = 0
     max_count = 5
     found = 1
+    phenny.say('----------- Retrieving logs, please wait --------------')
     while True:
         curr_line = f.readline()
         if curr_line =='':
@@ -37,17 +38,17 @@ def find_log(phenny, input):
             if found_count <= max_count:
                 phenny.say(curr_line)
                 found_count = found_count +1
-                time.sleep(1)
+                time.sleep(2)
             else:
                 found_count = found_count +1
                 found = 1
     if found_count < max_count:
         max_count = found_count
         
-    if found == 0:
+    if found_count == 0:
         phenny.say("Nothing found!")
     else:
-        phenny.say("Showing " + str(found_count) + " of " + str(max_count) + " log(s). ")
+        phenny.say("Showing " + str(max_count) + " of " + str(found_count) + " log(s). ")
 
 find_log.commands = ['find_log']
 find_log.priority = 'high'
