@@ -70,7 +70,7 @@ find_log.example = '.find_log blargh'
 def pastebin(phenny, found_text):  
     
     api_url = 'http://pastebin.com/api_public.php'
-    print >> sys.stderr, found_text
+   #  print >> sys.stderr, found_text
     
     post_text = { 'paste_code' : str(found_text) }
     post_text = urllib.urlencode(post_text)
@@ -78,7 +78,7 @@ def pastebin(phenny, found_text):
     resp = urllib2.urlopen(req)
     paste_url = resp.read()
     phenny.say('Full logs for this keyword is available at ' + paste_url)
-    print >> sys.stderr, paste_url
+  # print >> sys.stderr, paste_url
     # return paste_url
 
        
