@@ -48,7 +48,7 @@ def find_log(phenny, input):
                 time.sleep(1)
                 found_text = found_text + curr_line
             else:
-                phenny.say(str(found_count) +  ' ' + str(max_count))
+              #  phenny.say(str(found_count) +  ' ' + str(max_count))
                 found_count = found_count +1
                 found = 1
                 found_text = found_text + curr_line
