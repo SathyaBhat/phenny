@@ -49,7 +49,8 @@ def dict(phenny, input):
    if result.endswith('-') and (len(result) < 30): 
 	  phenny.reply('Sorry, no definition found.')
    else:
-      if ( word == trim('orange') or word == trim('honey')) :
+      if ( word == trim('orange') or word == trim('honey') or word == 
+trim('pineapple')) :
          phenny.say('Annoying character')
       else: phenny.say(result)
 dict.commands = ['dict']
